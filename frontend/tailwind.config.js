@@ -1,0 +1,103 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  theme: {
+    extend: {
+      colors: {
+        accent: {
+          50: "#F9F7F2",
+          100: "#F3EFE5",
+          200: "#E7DFCB",
+          300: "#D4C399",
+          400: "#D4AF37",
+          500: "#C6A43F",
+          600: "#A8892E",
+          700: "#8B6D1F",
+          800: "#6B5215",
+          900: "#4A370D",
+        },
+        gray: {
+          900: "#1E293B",
+          950: "#080E1A",
+        },
+        beige: {
+          50: "#F5F0EB",
+          100: "#E8DDD3",
+          200: "#D9C9BA",
+          300: "#F5EDE0",
+          400: "#B8A693",
+          500: "#A08E7A",
+        },
+      },
+      fontFamily: {
+        serif: ["Playfair Display", "Georgia", "serif"],
+        sans: [
+          "Inter",
+          "Poppins",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif",
+        ],
+      },
+      fontSize: {
+        xs: ["12px", { lineHeight: "16px" }],
+        sm: ["14px", { lineHeight: "20px" }],
+        base: ["16px", { lineHeight: "24px" }],
+        lg: ["18px", { lineHeight: "28px" }],
+        xl: ["20px", { lineHeight: "28px" }],
+        "2xl": ["24px", { lineHeight: "32px" }],
+        "3xl": ["28px", { lineHeight: "36px" }],
+        "4xl": ["32px", { lineHeight: "40px" }],
+        "5xl": ["40px", { lineHeight: "48px" }],
+        "6xl": ["48px", { lineHeight: "56px" }],
+        "7xl": ["56px", { lineHeight: "64px" }],
+      },
+      spacing: {
+        1: "4px",
+        2: "8px",
+        3: "12px",
+        4: "16px",
+        5: "20px",
+        6: "24px",
+        8: "32px",
+        10: "40px",
+        12: "48px",
+        16: "64px",
+        20: "80px",
+        24: "96px",
+      },
+      borderRadius: {
+        sm: "2px",
+        md: "4px",
+        lg: "8px",
+        xl: "12px",
+        "2xl": "16px",
+        "3xl": "24px",
+      },
+      boxShadow: {
+        sm: "0 1px 2px rgba(0, 0, 0, 0.05)",
+        md: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        lg: "0 10px 15px rgba(0, 0, 0, 0.1)",
+        xl: "0 20px 25px rgba(0, 0, 0, 0.1)",
+      },
+      animation: {
+        "fade-in": "fadeIn 0.3s ease-in-out",
+        "slide-in": "slideIn 0.3s ease-in-out",
+        "spin-slow": "spin 2s linear infinite",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideIn: {
+          "0%": { transform: "translateY(-10px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+    },
+  },
+  darkMode: "class",
+  plugins: [],
+};
