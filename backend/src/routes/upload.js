@@ -5,10 +5,14 @@ const fs = require('fs');
 
 const router = express.Router();
 
-// Ensure uploads directory exists
+// Ensure uploads directory exists (skip on Vercel — read-only filesystem)
 const uploadDir = path.join(__dirname, '../../uploads');
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
+try {
+  if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+  }
+} catch {
+  // In production (Vercel), the filesystem is read-only — uploads won't work locally
 }
 
 // Configure multer storage
