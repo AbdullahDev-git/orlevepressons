@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,6 +10,7 @@ import { CartProvider } from "./context/CartContext";
 import { AuthProvider } from "./context/AuthContext";
 import { AdminProvider } from "./context/AdminContext";
 import { useAdmin } from "./hooks/useAdmin";
+import SplashScreen from "./components/common/SplashScreen";
 
 // Layouts
 import MainLayout from "./components/layout/MainLayout";
@@ -85,11 +87,14 @@ function AppRoutes() {
 }
 
 function App() {
+  const [splashDone, setSplashDone] = useState(false);
+
   return (
     <ThemeProvider>
       <CartProvider>
         <AuthProvider>
           <AdminProvider>
+            {!splashDone && <SplashScreen onFinish={() => setSplashDone(true)} />}
             <Router>
               <AppRoutes />
             </Router>

@@ -42,13 +42,13 @@ export default function HeritageSection() {
           {/* Image Grid */}
           <div className="grid grid-cols-2 gap-4 animate-fade-in">
             <div className="bg-gradient-to-br from-amber-200 to-amber-100 dark:from-amber-900 dark:to-amber-800 rounded-lg aspect-square flex items-center justify-center">
-              <img src="/public/images/hero/5.jpg" alt="heritage"/>
+              <img src="/images/hero/5.jpg" alt="heritage"/>
             </div>
             <div className="bg-gradient-to-br from-rose-200 to-rose-100 dark:from-rose-900 dark:to-rose-800 rounded-lg aspect-square flex items-center justify-center">
-              <img src="/public/images/hero/6.jpg" alt="heritage"/>
+              <img src="/images/hero/6.jpg" alt="heritage"/>
             </div>
             <div className="col-span-2 bg-gradient-to-br from-neutral-200 to-neutral-100 dark:from-neutral-700 dark:to-neutral-600 rounded-lg aspect-video flex items-center justify-center">
-              <img src="/public/images/hero/7.jpg" alt="heritage"/>
+              <img src="/images/hero/7.jpg" alt="heritage"/>
             </div>
           </div>
         </div>

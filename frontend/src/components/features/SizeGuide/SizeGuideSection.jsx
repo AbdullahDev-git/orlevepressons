@@ -21,7 +21,7 @@ export default function SizeGuideSection() {
           <div className="animate-fade-in">
             <div className="rounded-2xl overflow-hidden aspect-square relative">
               <img
-                src="/public/images/hero/9.jpg"
+                src="/images/hero/9.jpg"
                 alt="How to measure press-on nails"
               />
             </div>

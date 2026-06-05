@@ -3,7 +3,6 @@ try {
   app = require('../src/app');
 } catch (err) {
   console.error('App init error:', err);
-  // Return a fallback Express app that shows the error
   const express = require('express');
   app = express();
   app.all('*', (req, res) => {

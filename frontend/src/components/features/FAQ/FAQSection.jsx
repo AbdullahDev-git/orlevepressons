@@ -43,7 +43,7 @@ export default function FAQSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Image */}
             <div className="bg-gradient-to-br from-amber-200 to-amber-100 dark:from-amber-900 dark:to-amber-800 aspect-video lg:aspect-auto flex items-center justify-center">
-              <img src="/public/images/hero/8.jpg" alt="FAQ" className="w-full h-full object-cover" />
+              <img src="/images/hero/8.jpg" alt="FAQ" className="w-full h-full object-cover" />
             </div>
 
             {/* Content */}

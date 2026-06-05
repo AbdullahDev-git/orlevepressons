@@ -11,7 +11,6 @@ const productRoutes = require('./routes/products');
 const customerRoutes = require('./routes/customers');
 const orderRoutes = require('./routes/orders');
 const cartRoutes = require('./routes/cart');
-const uploadRoutes = require('./routes/upload');
 const adminRoutes = require('./routes/admin');
 const contactRoutes = require('./routes/contact');
 
@@ -32,11 +31,6 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-// Static files for uploads (only in development - Vercel uses read-only filesystem)
-if (process.env.NODE_ENV !== 'production') {
-  app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
-}
-
 // Health check
 app.get('/api/health', (req, res) => {
   res.status(200).json({
@@ -51,9 +45,15 @@ app.use('/api/products', productRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/cart', cartRoutes);
-app.use('/api/upload', uploadRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/admin', adminRoutes);
+
+// Upload route and static files — local-only (Vercel has read-only filesystem)
+if (process.env.NODE_ENV !== 'production') {
+  const uploadRoutes = require('./routes/upload');
+  app.use('/api/upload', uploadRoutes);
+  app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+}
 
 // 404 handler
 app.use((req, res) => {
