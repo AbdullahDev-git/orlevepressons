@@ -23,14 +23,14 @@ export default function AdminSidebar() {
       {/* Logo */}
       <div className="p-6 border-b border-gray-700">
         <h2 className="text-2xl font-serif font-bold text-accent-400">
-          ORLEV Admin
+          ORLEVE Admin
         </h2>
         <p className="text-xs text-gray-400 mt-1">Control Panel</p>
       </div>
 
       {/* User Info */}
       <div className="p-4 border-b border-gray-700 mx-4 mt-4 bg-gray-800/50 rounded">
-        <p className="text-sm font-semibold">{adminUser?.username}</p>
+        <p className="text-sm font-semibold">{adminUser?.name || "Admin"}</p>
         <p className="text-xs text-gray-400">{adminUser?.email}</p>
       </div>
 

@@ -12,6 +12,7 @@ export default function AdminProducts() {
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState(null);
   const [uploading, setUploading] = useState(false);
+  const [imageUrl, setImageUrl] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     slug: "",
@@ -223,7 +224,6 @@ export default function AdminProducts() {
           {/* Image Upload */}
           <div className="mt-4">
             <label className="block text-sm font-medium text-gray-300 mb-2">Product Images</label>
-            <input type="file" ref={fileInputRef} multiple accept="image/*" onChange={handleFileSelect} className="hidden" />
             <div className="flex flex-wrap gap-3 mb-3">
               {formData.images.map((url, i) => (
                 <div key={i} className="relative w-20 h-20 rounded overflow-hidden border border-gray-700 group">
@@ -231,10 +231,12 @@ export default function AdminProducts() {
                   <button onClick={() => removeImage(i)} className="absolute top-0 right-0 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-bl opacity-0 group-hover:opacity-100 transition">×</button>
                 </div>
               ))}
-              <button onClick={() => fileInputRef.current?.click()} disabled={uploading} className="w-20 h-20 border-2 border-dashed border-gray-600 rounded flex items-center justify-center text-2xl text-gray-400 hover:text-accent-500 hover:border-accent-500 transition disabled:opacity-50">
-                {uploading ? <span className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></span> : "+"}
-              </button>
             </div>
+            <div className="flex gap-2">
+              <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} placeholder="Paste image URL..." className="flex-1 px-3 py-2 border border-gray-700 rounded bg-gray-700 text-white text-sm" />
+              <button onClick={() => { if (imageUrl) { setFormData(prev => ({ ...prev, images: [...prev.images, imageUrl] })); setImageUrl(""); } }} className="px-4 py-2 bg-accent-500 text-white rounded hover:bg-accent-600 transition text-sm font-medium">Add URL</button>
+            </div>
+            <p className="text-xs text-gray-500 mt-1">Use direct image URLs (from Unsplash, Imgur, etc.) — file upload not available on Vercel.</p>
           </div>
 
           <div className="mt-4">

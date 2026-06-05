@@ -22,7 +22,7 @@ export default function SplashScreen({ onFinish }) {
             phase === "enter" ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
         >
-          ORLEV
+          ORLEVE
         </h1>
       </div>
       <p

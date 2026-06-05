@@ -1,7 +1,5 @@
 const app = require('./src/app');
-const { PrismaClient } = require('@prisma/client');
-
-const prisma = new PrismaClient();
+const prisma = require('./src/prisma');
 const PORT = process.env.PORT || 5000;
 
 async function startServer() {

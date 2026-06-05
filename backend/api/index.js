@@ -7,8 +7,9 @@ try {
   app = express();
   app.all('*', (req, res) => {
     res.status(500).json({
-      error: err.message,
-      stack: err.stack?.split('\n').slice(0, 6).join('\n'),
+      success: false,
+      error: 'Server initialization failed',
+      message: err.message,
     });
   });
 }

@@ -37,7 +37,7 @@ export default function AdminLogin() {
         {/* Logo */}
         <div className="text-center mb-12 animate-slide-in">
           <h1 className="text-4xl font-serif font-bold text-white mb-2">
-            ORLEV
+            ORLEVE
           </h1>
           <p className="text-gray-400">Admin Dashboard</p>
         </div>

@@ -38,7 +38,7 @@ export default function AdminDashboard() {
           Dashboard
         </h1>
         <p className="text-gray-400">
-          Welcome to ORLEV Admin Control Panel
+          Welcome to ORLEVE Admin Control Panel
         </p>
       </div>
 

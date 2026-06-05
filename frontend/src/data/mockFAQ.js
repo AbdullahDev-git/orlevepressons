@@ -1,7 +1,7 @@
 export const mockFAQ = [
   {
     id: 1,
-    question: "How do I apply my ORLEV set for maximum longevity?",
+    question: "How do I apply my ORLEVE set for maximum longevity?",
     answer:
       "1. Sanitize nail beds with our alcohol prep pad. 2. Push back cuticles and file natural nails short. 3. Apply adhesive tab or nail glue. 4. Press on at 45-degree angle then flatten. 5. Hold for 10-15 seconds. 6. Apply clear top coat for extra adhesion. With proper application, our nails can last up to 3 weeks.",
   },

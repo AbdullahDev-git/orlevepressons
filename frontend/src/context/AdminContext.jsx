@@ -74,7 +74,6 @@ export function AdminProvider({ children }) {
   const loginAdmin = async (username, password) => {
     try {
       setLoading(true);
-      // Map "admin" username to the default admin email
       const email = username.includes("@") ? username : "admin@orleve.com";
       const data = await apiFetch("/admin/login", {
         method: "POST",
@@ -87,15 +86,7 @@ export function AdminProvider({ children }) {
       localStorage.setItem("adminToken", data.data.token);
       return true;
     } catch (err) {
-      // Fallback to hardcoded admin
-      if (username === "admin" && password === "orlevesoleha2726") {
-        const user = { username: "Admin", email: "admin@orleve.com" };
-        setAdminUser(user);
-        setToken("mock-token");
-        localStorage.setItem("adminUser", JSON.stringify(user));
-        localStorage.setItem("adminToken", "mock-token");
-        return true;
-      }
+      console.error("Login failed:", err);
       return false;
     } finally {
       setLoading(false);

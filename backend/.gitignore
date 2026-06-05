@@ -4,3 +4,5 @@ prisma/dev.db
 .env.local
 uploads
 tmp
+
+.vercel

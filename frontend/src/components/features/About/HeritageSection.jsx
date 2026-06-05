@@ -18,7 +18,7 @@ export default function HeritageSection() {
           <div className="space-y-6 animate-fade-in">
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-lg">
               Founded at the intersection of high fashion editorial and Gen Z
-              digital couture, ORLEV reimagines the nail salon experience as an
+              digital couture, ORLEVE reimagines the nail salon experience as an
               accessible luxury atelier.
             </p>
 
@@ -34,7 +34,7 @@ export default function HeritageSection() {
                 "The future of beauty is fast, fluid and fiercely individual."
               </p>
               <p className="text-accent-500 font-serif font-bold mt-3">
-                — Orlev Creative Studio
+                — ORLEVE Creative Studio
               </p>
             </div>
           </div>

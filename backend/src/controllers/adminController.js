@@ -1,8 +1,7 @@
-const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const prisma = require('../prisma');
 const { generateAdminToken } = require('../middleware/auth');
-
-const prisma = new PrismaClient();
 
 const loginAdmin = async (req, res) => {
   try {
